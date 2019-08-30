@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Responsive</title>
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/resetcssFile.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 20px;
+            width: 80%;
+            /* border: 1px solid blue; */
+        }
+        .logo {
+            /* border: 1px solid red; */
+            float: left;
+            width: 15%;
+            text-align: center;
+            font-size: 24x;
+        }
+        .logo h1 {
+            margin: 0;
+        }
+        .srch-bar {
+            /* border: 1px solid red; */
+            float: left;
+            width: 45%;
+            margin: auto;
+        }
+        .srch-bar input {
+            background-color: #F0F0F0;
+            outline: none;
+            border: 0;
+            width: 100%;
+            padding: 12px;
+            border-radius: 20px;
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        .signin,
+        .cart {
+            /* border: 1px solid red; */
+            float: left;
+            width: 18%;
+        }
+        .signin img,
+        .cart img {
+            width: 20%;
+            padding: 5px;
+        }
+        .signin a,
+        .cart a {
+            text-decoration: none;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 16px;
+
+        }
+
+        .signin a:hover,
+        .cart a:hover {
+            cursor: pointer;
+            color: #F51167;
+        }
+
+        .clearer {
+            clear: both;
+        }
+
+        .menu {
+            /* border: 1px solid blue; */
+            background-color: #282828;
+            text-align: center;
+            width: 100%;
+        }
+
+        .menu ul {
+            display: inline-block;
+            margin: 0;
+
+        }
+
+        .menu ul li {
+            list-style-type: none;
+            float: left;
+            padding: 10px 50px;
+        }
+
+        .menu ul li a:hover {
+            color: #F51167;
+        }
+
+        .menu li {
+            margin-left: 10px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .adds {
+
+            /* border: 10px solid hotpink; */
+        }
+
+        .adds img {
+            width: 100%;
+        }
+
+        nav {
+            /* text-align: center; */
+            /* border: 1px solid navy; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+        }
+
+        nav img {
+            width: 12%;
+            color: gray;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .payment,
+        .products,
+        .delivery {
+            float: left;
+            width: 33.34%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav .payment:hover,
+        nav .products:hover,
+        nav .delivery:hover {
+            background-color: #F51167;
+            cursor: pointer;
+        }
+
+        section {
+            text-align: center;
+            margin: 45px auto;
+            width: 75%;
+
+        }
+
+        section h1 {
+            text-transform: uppercase;
+            font-size: 32px;
+            font-family: sans-serif;
+            margin: 40px;
+        }
+
+        .image {
+
+            float: left;
+            width: 25%;
+        }
+
+        .image img {
+            max-width: 100%;
+            padding: 18px;
+        }
+
+        .image a {
+            margin: 0;
+            text-decoration: none;
+            color: gray;
+            font-size: 18px;
+        }
+
+        .menu-type li {
+            /* display: inline-block; */
+            float: left;
+            list-style-type: none;
+            margin: 10px;
+            background-color: #EBEBEB;
+            border-radius: 20px;
+            padding: 10px 30px;
+        }
+        ul.menu-type {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .menu-type a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .model-image {
+            float: left;
+            width: 25%;
+            /* border: 2px solid red; */
+            padding: 10px;
+        }
+
+        .model-image img {
+            max-width: 100%;
+        }
+
+        .model-image a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .model-row {
+
+            /* border: 1px solid pink; */
+
+        }
+
+        button.loadmore {
+            border: none;
+            outline: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            /* word-spacing: 10px; */
+        }
+        .menu-type li:hover,
+        button.loadmore:hover{
+            background-color: #F51167;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <div class="logo">
+                <h1>PRAVEEN</h1>
+            </div>
+            <div class="srch-bar">
+                <input type="text" placeholder="Search on divisima">
+
+            </div>
+            <div class="signin">
+
+                <a><img src="images/icons8-user-50.png" alt="user">Sign in or Create account</a>
+            </div>
+            <div class="cart">
+                <a><img src="images/icons8-favorite-cart-80.png" alt="cart">Shoopping cart</a>
+            </div>
+            <div class="clearer">
+
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Jewelry</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Blog</a></li>
+                <div class="clearer">
+
+                </div>
+            </ul>
+        </div>
+        <div class="adds">
+            <img src="images/actress-adult-art-863951.jpg" alt="add-pin-banner">
+        </div>
+    </header>
+    <nav>
+        <div class="payment">
+            <img src="images/icons8-card-payment-64.png" alt="cash">
+            <a href="">Fast Secure Paymnets</a>
+        </div>
+        <div class="products">
+            <img src="images/icons8-star-100.png" alt="star">
+            <a href="">Premium Products</a>
+        </div>
+        <div class="delivery">
+            <img src="images/icons8-favorite-cart-80.png" alt="">
+            <a href="">Free fast delivery</a>
+        </div>
+        <div class="clearer">
+
+        </div>
+    </nav>
+    <section>
+        <h1>Latest Products</h1>
+        <div class="image">
+            <p><img src="images/1.jpg" alt=""></p>
+            <p> <a href="#">Katrina Model Top</a></p>
+
+        </div>
+        <div class="image">
+            <p><img src="images/2.jpg" alt=""></p>
+            <p> <a href="#">Katrina Model Top</a></p>
+        </div>
+        <div class="image">
+            <p><img src="images/3.jpg" alt=""></p>
+            <p> <a href="#">Katrina Model Top</a></p>
+        </div>
+        <div class="image">
+            <p><img src="images/4.jpg" alt=""></p>
+            <p> <a href="#">Katrina Model Top</a></p>
+        </div>
+        <div class="clearer">
+        </div>
+        <h1>Browse top selling products</h1>
+
+        <ul class="menu-type">
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Jumsuits</a></li>
+            <li><a href="#">Lingrie</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">dresses</a></li>
+            <li><a href="#">coats</a></li>
+            <li><a href="#">jumpers</a></li>
+            <li><a href="#">leggings</a></li>
+            <div class="clearer">
+            </div>
+        </ul>
+        <div class="model-row">
+            <div class="model-image">
+                <p><img src="images/5.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/6.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/7.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/8.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="clearer">
+
+            </div>
+        </div>
+        <div class="model-row">
+            <div class="model-image">
+                <p><img src="images/9.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/10.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/11.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="model-image">
+                <p><img src="images/12.jpg" alt=""></p>
+                <p> <a href="#">Katrina Model Top</a></p>
+            </div>
+            <div class="clearer">
+
+            </div>
+        </div>
+
+        <button class="loadmore">LoadMore</button>
+    </section>
+
+    <footer>
+
+
+    </footer>
+</body>
+
+</html>
